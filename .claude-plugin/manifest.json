@@ -1,0 +1,10 @@
+{
+  "name": "veltrix-skills",
+  "version": "1.0.0",
+  "description": "Business operations skills for AI agents. Finance, sales, customer success, strategy, content, and more.",
+  "author": "Veltrix Collective",
+  "homepage": "https://github.com/LukeJMadden/veltrix-skills",
+  "license": "MIT",
+  "skills_dir": "skills",
+  "hooks_dir": "hooks"
+}
