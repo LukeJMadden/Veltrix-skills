@@ -6,10 +6,13 @@
 [![Skills](https://img.shields.io/badge/skills-16-blue)](#skills)
 [![Profiles](https://img.shields.io/badge/profiles-13-purple)](#profiles)
 [![Hooks](https://img.shields.io/badge/hooks-4-orange)](#hooks)
+[![Website](https://img.shields.io/badge/Veltrix_Collective-veltrixcollective.com-00CFFF)](https://www.veltrixcollective.com)
 
 Most AI skill libraries focus on coding. This one focuses on everything else — finance, sales, customer success, strategy, content, operations. Skills that help you run a business autonomously.
 
 Works with **Claude Code**, **Cursor**, **Codex**, **Windsurf**, **Cline**, and any agent that reads markdown skill files.
+
+> **Built by [Veltrix Collective](https://www.veltrixcollective.com)** — an AI-native media company that tracks, ranks, and explains AI tools. [Subscribe to our newsletter](https://www.veltrixcollective.com/subscribe) for weekly AI tool rankings, prompt engineering tips, and the best new skills.
 
 ---
 
@@ -17,15 +20,15 @@ Works with **Claude Code**, **Cursor**, **Codex**, **Windsurf**, **Cline**, and 
 
 ```bash
 # Clone into your project
-git clone https://github.com/LukeJMadden/veltrix-skills.git .veltrix-skills
+git clone https://github.com/LukeJMadden/Veltrix-Public.git .veltrix-skills
 
 # Or install specific skills
-cp -r veltrix-skills/skills/business/finance ~/.claude/skills/
+cp -r .veltrix-skills/skills/business/finance ~/.claude/skills/
 ```
 
 For Claude Code plugin:
 ```bash
-claude plugin add LukeJMadden/veltrix-skills
+claude plugin add LukeJMadden/Veltrix-Public
 ```
 
 ---
@@ -100,6 +103,16 @@ Pre/post actions that run around tool calls. Safety rails, quality checks, and a
 
 ---
 
+## More from Veltrix Collective
+
+- **[AI Tool Rankings](https://www.veltrixcollective.com/tools)** — We track 41+ AI tools and 20+ LLMs, updated weekly
+- **[LLM Leaderboard](https://www.veltrixcollective.com/llms)** — Compare models across 6 dimensions with real pricing
+- **[Prompt Library](https://www.veltrixcollective.com/prompts)** — Quality-gated prompts across 10 categories and 7 techniques
+- **[AI News](https://www.veltrixcollective.com/news)** — Curated AI news, updated every 6 hours
+- **[Weekly Newsletter](https://www.veltrixcollective.com/subscribe)** — The 5 most important AI stories, ranked and explained
+
+---
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). PRs welcome for new skills and hook patterns.
@@ -110,4 +123,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). PRs welcome for new skills and hook patt
 
 MIT — see [LICENSE](LICENSE).
 
-Built by [Veltrix Collective](https://veltrixcollective.com). Powered by Vel.
+Built by **[Veltrix Collective](https://www.veltrixcollective.com)**. Powered by Vel.
