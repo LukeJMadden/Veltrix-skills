@@ -113,11 +113,6 @@ Pre/post actions that run around tool calls. Safety rails, quality checks, and a
 
 ---
 
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md). PRs welcome for new skills and hook patterns.
-
----
 
 ## License
 
