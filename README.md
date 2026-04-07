@@ -1,6 +1,6 @@
 # Veltrix Skills
 
-**Business operations skills for AI agents. Run a company, not just write code.**
+**Ready-made AI skills for Claude Code. Install, customise, use.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-16-blue)](#skills)
@@ -8,114 +8,156 @@
 [![Hooks](https://img.shields.io/badge/hooks-4-orange)](#hooks)
 [![Website](https://img.shields.io/badge/Veltrix_Collective-veltrixcollective.com-00CFFF)](https://www.veltrixcollective.com)
 
-Most AI skill libraries focus on coding. This one focuses on everything else — finance, sales, customer success, strategy, content, operations. Skills that help you run a business autonomously.
+A library of AI skills for running a business — not just writing code. Finance, sales, content, operations, customer success, and more. Each skill is a markdown file that tells Claude how to handle a specific type of work.
 
 Works with **Claude Code**, **Cursor**, **Codex**, **Windsurf**, **Cline**, and any agent that reads markdown skill files.
 
-> **Built by [Veltrix Collective](https://www.veltrixcollective.com)** — an AI-native media company that tracks, ranks, and explains AI tools. [Subscribe to our newsletter](https://www.veltrixcollective.com/subscribe) for weekly AI tool rankings, prompt engineering tips, and the best new skills.
+> **Completed the [Veltrix AI Course](https://veltrixcollective.com/course)?** This is your next step. The course teaches you to build skills (Module 11). This repo gives you 16 ready-made ones to install and customise.
 
 ---
 
-## Quick Start
+## Getting started
+
+### Install a single skill
 
 ```bash
-# Clone into your project
-git clone https://github.com/LukeJMadden/Veltrix-Public.git .veltrix-skills
-
-# Or install specific skills
-cp -r .veltrix-skills/skills/business/finance ~/.claude/skills/
+# Copy a skill into your Claude Code setup
+cp -r skills/business/finance/  ~/.claude/skills/finance/
 ```
 
-For Claude Code plugin:
+### Install all skills
+
 ```bash
-claude plugin add LukeJMadden/Veltrix-Public
+# Clone the whole library
+git clone https://github.com/LukeJMadden/veltrix-skills.git
+
+# Copy everything to your Claude Code skills directory
+cp -r veltrix-skills/skills/* ~/.claude/skills/
 ```
+
+### What is a skill?
+
+A skill is a `SKILL.md` file that gives Claude specific knowledge and instructions for a type of task. When you ask Claude to do something that matches a skill, it loads those instructions automatically.
+
+Think of it like giving a new employee a handbook for their role — except the employee is AI and the handbook is a markdown file.
+
+If you want to learn how to build your own skills from scratch, take the [free AI course](https://veltrixcollective.com/course) — Module 11 covers this step by step.
 
 ---
 
 ## Skills
 
-### Business Operations
+### Starter skills
 
-| Skill | Description |
-|-------|-------------|
-| [Finance](skills/business/finance/SKILL.md) | Invoicing, reconciliation, cash flow, forecasting, tax compliance |
-| [Sales](skills/business/sales/SKILL.md) | Pipeline management, lead scoring, proposal generation |
-| [Customer Success](skills/business/customer-success/SKILL.md) | Support triage, health scoring, churn prediction |
-| [Strategy](skills/business/strategy/SKILL.md) | Competitor analysis, market positioning, strategic recommendations |
-| [Procurement](skills/business/procurement/SKILL.md) | Vendor evaluation, spend analytics, contract renewals |
-| [Product](skills/business/product/SKILL.md) | RICE prioritisation, roadmap tracking, release notes |
+Best for **course graduates (Module 11+)** or anyone comfortable with Claude Code. Simple, single-purpose, immediate value.
 
-### Content & Marketing
+| Skill | What it does | Install |
+|---|---|---|
+| [Social Media](skills/content/social-media/) | Drafts posts for LinkedIn, X, Instagram, Facebook. Platform-specific tone and length. | `cp -r skills/content/social-media/ ~/.claude/skills/` |
+| [Brand Voice](skills/content/brand-voice/) | Maintains consistent voice across all content. Configurable tone, vocabulary, style rules. | `cp -r skills/content/brand-voice/ ~/.claude/skills/` |
+| [Newsletter](skills/content/newsletter/) | Drafts weekly newsletters from source material. Subject lines, sections, CTAs. | `cp -r skills/content/newsletter/ ~/.claude/skills/` |
+| [SEO + AEO + GEO](skills/content/seo-geo/) | Optimises content for search engines and AI answer engines. Schema, meta, citations. | `cp -r skills/content/seo-geo/ ~/.claude/skills/` |
 
-| Skill | Description |
-|-------|-------------|
-| [SEO + AEO + GEO](skills/content/seo-geo/SKILL.md) | Search, answer engine, and generative engine optimisation |
-| [Newsletter](skills/content/newsletter/SKILL.md) | Draft, QA, approval, and send pipeline |
-| [Social Media](skills/content/social-media/SKILL.md) | Multi-platform content adaptation |
-| [Brand Voice](skills/content/brand-voice/SKILL.md) | Brand consistency enforcement |
+### Business skills
 
-### Operations
+For **operations leads, PMs, consultants, founders**. Each skill handles a business function that AI can assist with.
 
-| Skill | Description |
-|-------|-------------|
-| [Deployment Monitor](skills/operations/deployment-monitor/SKILL.md) | Self-healing deployment checks with auto-retry |
-| [Incident Response](skills/operations/incident-response/SKILL.md) | 5-step incident playbook |
-| [Cron Health](skills/operations/cron-health/SKILL.md) | Scheduled task monitoring and alerting |
+| Skill | What it does | Install |
+|---|---|---|
+| [Finance](skills/business/finance/) | Budget tracking, expense analysis, financial summaries, invoice processing. | `cp -r skills/business/finance/ ~/.claude/skills/` |
+| [Sales](skills/business/sales/) | Lead research, outreach drafting, CRM updates, pipeline analysis. | `cp -r skills/business/sales/ ~/.claude/skills/` |
+| [Customer Success](skills/business/customer-success/) | Ticket triage, response drafting, churn risk identification, feedback analysis. | `cp -r skills/business/customer-success/ ~/.claude/skills/` |
+| [Product](skills/business/product/) | Feature prioritisation, roadmap drafting, user story writing, competitor analysis. | `cp -r skills/business/product/ ~/.claude/skills/` |
+| [Strategy](skills/business/strategy/) | Market analysis, SWOT, competitive positioning, strategic planning. | `cp -r skills/business/strategy/ ~/.claude/skills/` |
+| [Procurement](skills/business/procurement/) | Vendor comparison, RFP drafting, contract review, cost-benefit analysis. | `cp -r skills/business/procurement/ ~/.claude/skills/` |
 
-### Frontend
+### Technical skills
 
-| Skill | Description |
-|-------|-------------|
-| [Design](skills/frontend/design/SKILL.md) | Production-grade UI with bold aesthetic direction |
+For **developers and technical users**. Requires some familiarity with code and infrastructure.
+
+| Skill | What it does | Install |
+|---|---|---|
+| [Frontend Design](skills/frontend/design/) | UI component generation, responsive layouts, accessibility checks, design system compliance. | `cp -r skills/frontend/design/ ~/.claude/skills/` |
+| [Deployment Monitor](skills/operations/deployment-monitor/) | Checks deployment health, verifies endpoints, alerts on failures. | `cp -r skills/operations/deployment-monitor/ ~/.claude/skills/` |
+| [Cron Health](skills/operations/cron-health/) | Monitors scheduled jobs, detects failures, suggests fixes. | `cp -r skills/operations/cron-health/ ~/.claude/skills/` |
+| [Incident Response](skills/operations/incident-response/) | Error triage, root cause analysis, runbook execution, post-mortem drafting. | `cp -r skills/operations/incident-response/ ~/.claude/skills/` |
 
 ---
 
 ## Profiles
 
-Profiles are scoped configurations that give agents the right tools, context, and personality for a task. Instead of one agent doing everything, you delegate to specialists.
+Profiles are pre-configured sets of skills, model preferences, and tool permissions for different types of work.
 
-13 profiles included: `code`, `research`, `content`, `ops`, `admin`, `review`, `finance`, `data`, `sales`, `customer`, `product`, `strategy`, `procurement`
+13 profiles in `profiles/profiles.yaml`:
 
-See [profiles/README.md](profiles/README.md) for details.
+| Profile | Focus | Skills loaded |
+|---|---|---|
+| code | Write, fix, review code | frontend/design |
+| research | Deep research, analysis | strategy |
+| content | Articles, social, newsletters | brand-voice, newsletter, seo-geo, social-media |
+| ops | Deploy, configure, maintain | deployment-monitor, cron-health, incident-response |
+| admin | Scheduling, email, coordination | — |
+| review | Code review, quality checks | — |
+| finance | Budget, billing, costs | finance |
+| data | Database, analytics, exports | — |
+| sales | Outreach, leads, CRM | sales |
+| customer | Support, feedback | customer-success |
+| product | Roadmap, features, UX | product |
+| strategy | Planning, competitors | strategy |
+| procurement | Vendor research, purchasing | procurement |
+
+See `profiles/README.md` for configuration details.
 
 ---
 
 ## Hooks
 
-Pre/post actions that run around tool calls. Safety rails, quality checks, and audit trails.
+Safety and quality hooks that run before/after tool calls:
 
-| Hook | Trigger | Action |
-|------|---------|--------|
-| [Safety Check](hooks/safety-check.md) | Before destructive shell commands | Block |
-| [Lint After Write](hooks/lint-after-write.md) | After writing to source files | Run linter |
-| [No Phantom Tickets](hooks/no-phantom-tickets.md) | Before creating error-investigation tickets | Block |
-| [Restart Safety](hooks/restart-safety.md) | Before server restart | Check cron schedule |
-
----
-
-## Philosophy
-
-1. **Business-first, not code-first.** Most AI agents are set up to write code. Few are set up to run a company.
-2. **Profiles over personas.** Scoped task configurations, not named persistent agents. The system learns, not the agent.
-3. **Agent-agnostic.** Plain markdown files. No framework lock-in. Works anywhere.
-4. **Hooks are guardrails.** Prevent the AI from creating phantom tickets, deleting production data, or deploying on Fridays.
+| Hook | What it does |
+|---|---|
+| [Safety Check](hooks/safety-check.md) | Blocks dangerous shell commands (rm -rf, force push, etc.) |
+| [Lint After Write](hooks/lint-after-write.md) | Runs linter after file writes to catch errors immediately |
+| [No Phantom Tickets](hooks/no-phantom-tickets.md) | Prevents AI from creating tickets for its own errors |
+| [Restart Safety](hooks/restart-safety.md) | Confirms before restarting services |
 
 ---
 
-## More from Veltrix Collective
+## Course connection
 
-- **[AI Tool Rankings](https://www.veltrixcollective.com/tools)** — We track 41+ AI tools and 20+ LLMs, updated weekly
-- **[LLM Leaderboard](https://www.veltrixcollective.com/llms)** — Compare models across 6 dimensions with real pricing
-- **[Prompt Library](https://www.veltrixcollective.com/prompts)** — Quality-gated prompts across 10 categories and 7 techniques
-- **[AI News](https://www.veltrixcollective.com/news)** — Curated AI news, updated every 6 hours
-- **[Weekly Newsletter](https://www.veltrixcollective.com/subscribe)** — The 5 most important AI stories, ranked and explained
+This repo is designed as the graduation toolkit for the [Veltrix AI Course](https://veltrixcollective.com/course):
+
+| Course module | What you learn | Skills to try after |
+|---|---|---|
+| Module 3: Prompting | How to write effective prompts | Read any SKILL.md to see prompts in action |
+| Module 8: Claude Projects | Custom instructions and context | Brand Voice, Newsletter |
+| Module 11: Skills & Workflows | How to build your own skills | Modify any skill, then build your own |
+| Module 12: Agentic AI | Autonomous agents | Deployment Monitor, Incident Response, Cron Health |
 
 ---
 
+## Build your own
 
-## License
+Every skill is a markdown file. To create your own:
 
-MIT — see [LICENSE](LICENSE).
+1. Create a folder: `~/.claude/skills/my-skill/`
+2. Add a `SKILL.md` file with:
+   - What the skill does (one paragraph)
+   - When to use it (triggers)
+   - How to do it (step-by-step instructions)
+   - What NOT to do (constraints)
+   - Example output
+3. Claude Code auto-discovers it on next run
 
-Built by **[Veltrix Collective](https://www.veltrixcollective.com)**. Powered by Vel.
+Module 11 of the [AI course](https://veltrixcollective.com/course) walks through this in detail.
+
+---
+
+## Stay connected
+
+- [The AI Briefing](https://veltrixcollective.com/subscribe) — free weekly AI newsletter
+- [AI Course](https://veltrixcollective.com/course) — 14 hands-on modules, free forever
+- [AI Tool Rankings](https://veltrixcollective.com/tools) — 200+ tools ranked
+- [Website Audit](https://veltrixcollective.com/websiteaudit) — $99 full-site analysis
+
+Built by [Luke Madden](https://linkedin.com/in/lukejmadden) and [Veltrix Collective](https://veltrixcollective.com).
